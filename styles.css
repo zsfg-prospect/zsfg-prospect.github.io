@@ -106,3 +106,13 @@ footer {
   margin-right: 50px;
 }
 
+.pub-list {
+  list-style-type: none;
+}
+.pub-list li {
+  margin-bottom: 10px;
+}
+
+.pub-caption {
+  font-size: 14px;
+}
