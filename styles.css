@@ -59,6 +59,25 @@ main {
     text-align: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; 
+  padding: 20px;
+}
+
+.text-content {
+  flex: 1; 
+  max-width: 600px; 
+}
+
+.responsive-image {
+  max-width: 40%; 
+  height: auto; 
+  border-radius: 10px; 
+}
+
 /* Team Section */
 .team-container {
     display: flex;
