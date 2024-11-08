@@ -29,7 +29,10 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
+    max-width: 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
