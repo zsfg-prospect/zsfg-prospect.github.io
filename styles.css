@@ -73,6 +73,12 @@ main {
   max-width: 600px; 
 }
 
+.news-content {
+  flex: 1; 
+  max-width: 900px; 
+}
+
+
 .responsive-image {
   max-width: 35%; 
   height: auto; 
