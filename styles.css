@@ -73,6 +73,7 @@ main {
 iframe {
     flex: 1; /* Adjusts the iframe size and responsiveness */
     max-width: 80%;
+    height: 250px;
 }
 
 .text-content {
@@ -88,6 +89,7 @@ iframe {
 
             iframe {
                 width: 100%; /* Make iframe take full width */
+		height: 250px;
             }
 
             .text-content {
