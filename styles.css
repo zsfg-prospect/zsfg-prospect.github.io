@@ -70,12 +70,12 @@ main {
 }
 
 iframe {
-    flex: 1 1 80%; /* Adjusts the iframe size and responsiveness */
+    flex: 1; /* Adjusts the iframe size and responsiveness */
     max-width: 80%;
 }
 
 .text-content {
-  flex: 1 1 100%;
+  flex: 1;
   max-width: 600px; 
 }
 
