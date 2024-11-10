@@ -67,6 +67,7 @@ main {
   gap: 20px; 
   padding: 20px;
   justify-content: center; 
+  max-width: 1000px;
 }
 
 iframe {
@@ -165,4 +166,20 @@ footer {
 
 .pub-caption {
   font-size: 14px;
+}
+
+.header-border {
+	background: url( images/header-border.png ) repeat-y center top;
+	background-size: 100%;
+	display: block;
+	height: 4px;
+	position: relative;
+	width: 100%;
+	z-index: 9998;
+
+	&.top {
+		position: fixed;
+		top: 0;
+		z-index: 10000;
+	}
 }
