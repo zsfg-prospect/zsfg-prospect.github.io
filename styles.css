@@ -61,17 +61,38 @@ main {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px; 
   padding: 20px;
   justify-content: center; 
 }
 
+iframe {
+    flex: 1 1 80%; /* Adjusts the iframe size and responsiveness */
+    max-width: 80%;
+}
+
 .text-content {
-  flex: 1; 
+  flex: 1 1 100%;
   max-width: 600px; 
 }
+
+@media (max-width: 768px) {
+    .container {
+                flex-direction: column; /* Stacks elements vertically */
+                align-items: center; /* Center elements for better layout */
+            }
+
+            iframe {
+                width: 100%; /* Make iframe take full width */
+            }
+
+            .text-content {
+                text-align: center; /* Optional: center text for better readability */
+            }
+        }
 
 .news-content {
   flex: 1; 
