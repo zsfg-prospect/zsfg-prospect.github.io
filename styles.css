@@ -30,7 +30,7 @@ nav ul {
 
 nav ul li {
     display: flex;
-    max-width: 150px;
+    max-width: 250px;
     justify-content: center;
     align-items: center;
 }
