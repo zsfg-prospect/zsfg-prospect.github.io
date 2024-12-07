@@ -102,6 +102,13 @@ iframe {
   max-width: 900px; 
 }
 
+.news-content h2 {
+  margin-bottom: 10px; 
+}
+
+.news-content ul li {
+  margin-bottom: 10px; 
+}
 
 .responsive-image {
   max-width: 35%; 
