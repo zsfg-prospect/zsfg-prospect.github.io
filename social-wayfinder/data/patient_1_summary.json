@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "identified_needs": [
+      {
+        "need_type": "housing",
+        "description": "The patient lives alone and requires In-Home Supportive Services (IHSS).",
+        "citation": {
+          "note_id": "2",
+          "quote": "The patient lives alone in a house/apartment. She has Medicare Part B only and is enrolled in a local health plan. The patient receives 156 hours and 36 minutes per month of In-Home Supportive Services (IHSS)."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Contacted IHSS social worker to inform them of patient\u2019s return home and requested resumption of IHSS services.",
+            "status": "in_progress",
+            "date": "2023-09-27",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW contacted the patient\u2019s IHSS social worker to inform them of the patient\u2019s return home and requested the resumption of IHSS services."
+            }
+          }
+        ],
+        "planned_actions": [],
+        "status": "ongoing",
+        "priority": "high"
+      },
+      {
+        "need_type": "transportation",
+        "description": "The patient needs transportation for discharge.",
+        "citation": {
+          "note_id": "2",
+          "quote": "A wheelchair van has been scheduled for pick-up today at 4:00 PM to transport the patient home."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Scheduled a wheelchair van for pick-up today at 4:00 PM.",
+            "status": "in_progress",
+            "date": "2023-09-27",
+            "citation": {
+              "note_id": "2",
+              "quote": "A wheelchair van has been scheduled for pick-up today at 4:00 PM to transport the patient home."
+            }
+          }
+        ],
+        "planned_actions": [],
+        "status": "ongoing",
+        "priority": "medium"
+      },
+      {
+        "need_type": "medical equipment",
+        "description": "The patient needs a hospital bed and a power wheelchair.",
+        "citation": {
+          "note_id": "2",
+          "quote": "The medical provider has ordered a hospital bed for the patient, with the order submitted to a healthcare supplier for fulfillment and coordination with the patient\u2019s family member. Additionally, an order for a power wheelchair has been submitted to a local wheelchair supplier, with a request for follow-up with the patient\u2019s primary care provider for any necessary documentation. The local wheelchair supplier reported that the patient received a power wheelchair in 2021 from another supplier."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Ordered hospital bed and power wheelchair for the patient.",
+            "status": "in_progress",
+            "date": "2023-09-27",
+            "citation": {
+              "note_id": "2",
+              "quote": "The medical provider has ordered a hospital bed for the patient, with the order submitted to a healthcare supplier for fulfillment and coordination with the patient\u2019s family member. Additionally, an order for a power wheelchair has been submitted to a local wheelchair supplier, with a request for follow-up with the patient\u2019s primary care provider for any necessary documentation."
+            }
+          }
+        ],
+        "planned_actions": [],
+        "status": "ongoing",
+        "priority": "high"
+      },
+      {
+        "need_type": "adult protective services",
+        "description": "APS concerns about family administering unprescribed medications to the patient.",
+        "citation": {
+          "note_id": "1",
+          "quote": "SW requested the medical team provide more information regarding current APS concerns about the family administering unprescribed medications to the patient."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Contacted APS worker to inform about patient's discharge plan.",
+            "status": "in_progress",
+            "date": "2023-09-27",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW also contacted Adult Protective Services (APS) to inform them of the patient\u2019s discharge plan and left a voice message."
+            }
+          }
+        ],
+        "planned_actions": [
+          {
+            "description": "Medical team to clarify the situation with the family and provide more context and details about the medications.",
+            "status": "planned",
+            "citation": {
+              "note_id": "1",
+              "quote": "The medical team will clarify the situation with the family and provide more context and details about the medications."
+            }
+          }
+        ],
+        "status": "ongoing",
+        "priority": "high"
+      }
+    ],
+    "summary_date": "2023-09-27",
+    "overall_status": "The patient has multiple ongoing social needs including housing, transportation, medical equipment, and APS concerns. Actions are in progress to address these needs."
+  }
+}
