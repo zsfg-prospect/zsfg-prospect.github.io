@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "identified_needs": [
+      {
+        "need_type": "food insecurity",
+        "description": "The patient has insufficient access to nutritious food and is unable to cook meals independently.",
+        "citation": {
+          "note_id": "2",
+          "quote": "The patient reports skipping meals due to inability to shop for or prepare food. She relies heavily on pre-packaged meals and has lost 10 pounds in the last 3 months."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Referred patient to Meals on Wheels program for home-delivered meals.",
+            "status": "in_progress",
+            "date": "2023-10-15",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW completed and submitted a referral to Meals on Wheels. Program representative confirmed eligibility and stated service can begin within 5-7 business days."
+            }
+          }
+        ],
+        "planned_actions": [
+          {
+            "description": "Provide patient with list of local food banks and pantries.",
+            "status": "planned",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW will compile and send a list of neighborhood food banks and pantries with contact information and service hours."
+            }
+          }
+        ],
+        "status": "ongoing",
+        "priority": "high"
+      },
+      {
+        "need_type": "medication management",
+        "description": "The patient has difficulty managing multiple medications and reports missing doses.",
+        "citation": {
+          "note_id": "1",
+          "quote": "The patient disclosed confusion with medication regimen following recent prescription changes. She reports missing afternoon doses approximately 3-4 times per week."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Arranged for pharmacy medication review and organization service.",
+            "status": "in_progress",
+            "date": "2023-10-14",
+            "citation": {
+              "note_id": "1",
+              "quote": "SW contacted patient's pharmacy to arrange for medication review, blister pack organization, and potential delivery options. Pharmacy will call patient directly to set up service."
+            }
+          }
+        ],
+        "planned_actions": [
+          {
+            "description": "Assess need for electronic medication reminder system.",
+            "status": "planned",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW will follow up with patient after discharge to evaluate if an electronic medication reminder system would be beneficial and explore coverage options."
+            }
+          }
+        ],
+        "status": "ongoing",
+        "priority": "high"
+      },
+      {
+        "need_type": "financial assistance",
+        "description": "The patient is struggling to pay medical bills and is unaware of available financial assistance programs.",
+        "citation": {
+          "note_id": "1",
+          "quote": "The patient expressed significant concern about mounting medical bills, stating she is using credit cards to pay for medications and has delayed filling some prescriptions due to cost."
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Provided application for hospital financial assistance program.",
+            "status": "in_progress",
+            "date": "2023-10-15",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW provided patient with hospital financial assistance application and reviewed eligibility requirements. Patient began completing application with SW assistance."
+            }
+          }
+        ],
+        "planned_actions": [
+          {
+            "description": "Schedule meeting with financial counselor to review Medicare Part D options.",
+            "status": "planned",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW will schedule patient for consultation with hospital financial counselor to review Medicare Part D prescription options during open enrollment period."
+            }
+          }
+        ],
+        "status": "ongoing",
+        "priority": "medium"
+      },
+      {
+        "need_type": "care coordination",
+        "description": "The patient needs help coordinating multiple specialist appointments and home health services.",
+        "citation": {
+          "note_id": "2",
+          "quote": "The patient has upcoming appointments with cardiology, pulmonology, and endocrinology but lacks transportation and is confused about scheduling. Patient states 'I don't know how I'll get to all these appointments or even keep track of them.'"
+        },
+        "previous_actions": [],
+        "current_actions": [
+          {
+            "description": "Applied for transportation assistance program through local senior center.",
+            "status": "in_progress",
+            "date": "2023-10-15",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW completed application for senior transportation program that provides door-to-door service for medical appointments. Program typically takes 2 weeks for approval."
+            }
+          }
+        ],
+        "planned_actions": [
+          {
+            "description": "Refer to care coordination service for ongoing appointment management.",
+            "status": "planned",
+            "citation": {
+              "note_id": "2",
+              "quote": "SW will refer patient to community care coordination program for ongoing assistance with appointment scheduling, reminders, and transportation arrangements."
+            }
+          }
+        ],
+        "status": "ongoing",
+        "priority": "medium"
+      }
+    ],
+    "summary_date": "2023-10-15",
+    "overall_status": "The patient has multiple social needs including food insecurity, medication management challenges, financial concerns, and care coordination needs. Several interventions are in progress, with additional follow-up actions planned post-discharge."
+  }
+}
