@@ -22,7 +22,21 @@
         ],
         "planned_actions": [],
         "status": "ongoing",
-        "priority": "high"
+        "priority": "high",
+        "relevant_resources": [
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Other%20Medical%20Services&refinementList[eligibilities][0]=I%20am%20a%20Senior&refinementList[eligibilities][1]=Limited%20Mobility",
+            "category": "Health Resources",
+            "tags": ["Senior", "Medicare", "In-Home Support"]
+          },
+          {
+            "name": "Finance Resources: Financial assistance for living expenses",
+            "url": "https://www.sfserviceguide.org/financial-resources/results?refinementList[categories][0]=Financial%20assistance%20for%20living%20expenses&refinementList[eligibilities][0]=I%20am%20a%20Senior&refinementList[eligibilities][1]=Low-Income",
+            "category": "Finance Resources",
+            "tags": ["Senior", "Low-Income", "Medicare"]
+          }
+        ]
       },
       {
         "need_type": "transportation",
@@ -45,7 +59,8 @@
         ],
         "planned_actions": [],
         "status": "ongoing",
-        "priority": "medium"
+        "priority": "medium",
+        "relevant_resources": []
       },
       {
         "need_type": "medical equipment",
@@ -68,7 +83,15 @@
         ],
         "planned_actions": [],
         "status": "ongoing",
-        "priority": "high"
+        "priority": "high",
+        "relevant_resources": [
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Other%20Medical%20Services&refinementList[eligibilities][0]=Limited%20Mobility&refinementList[eligibilities][1]=Adults",
+            "category": "Health Resources",
+            "tags": ["Durable Medical Equipment", "Limited Mobility"]
+          }
+        ]
       },
       {
         "need_type": "adult protective services",
@@ -100,7 +123,21 @@
           }
         ],
         "status": "ongoing",
-        "priority": "high"
+        "priority": "high",
+        "relevant_resources": [
+          {
+            "name": "Health Resources: Medication Management",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Medication%20Management&refinementList[eligibilities][0]=I%20am%20a%20Senior",
+            "category": "Health Resources",
+            "tags": ["Medication Management", "Senior"]
+          },
+          {
+            "name": "Substance Use Resources: Healthier Habits/Safer Use",
+            "url": "https://www.sfserviceguide.org/substance-use-resources/results?refinementList[categories][0]=Healthier%20Habits%2FSafer%20Use&refinementList[eligibilities][0]=I%20am%20a%20Senior",
+            "category": "Substance Use Resources",
+            "tags": ["Medication Management", "Senior"]
+          }
+        ]
       }
     ],
     "summary_date": "2023-09-27",

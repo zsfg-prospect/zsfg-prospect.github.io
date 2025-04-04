@@ -31,7 +31,27 @@
           }
         ],
         "status": "ongoing",
-        "priority": "high"
+        "priority": "high",
+        "relevant_resources": [
+          {
+            "name": "Food Resources: Home-delivered groceries and home-delivered meals",
+            "url": "https://www.sfserviceguide.org/food-resources/results?refinementList[categories][0]=Home-delivered%20groceries%20and%20home-delivered%20meals&refinementList[eligibilities][0]=I%20am%20a%20Senior&refinementList[eligibilities][1]=Limited%20Mobility",
+            "category": "Food Resources",
+            "tags": ["Home-Delivered Meals", "Senior", "Limited Mobility"]
+          },
+          {
+            "name": "Food Resources: Food pantries",
+            "url": "https://www.sfserviceguide.org/food-resources/results?refinementList[categories][0]=Food%20pantries&refinementList[eligibilities][0]=I%20am%20a%20Senior",
+            "category": "Food Resources",
+            "tags": ["Food Pantries", "Emergency Food"]
+          },
+          {
+            "name": "Food Resources: Food benefits",
+            "url": "https://www.sfserviceguide.org/food-resources/results?refinementList[categories][0]=Food%20benefits&refinementList[eligibilities][0]=Low-Income",
+            "category": "Food Resources",
+            "tags": ["CalFresh", "Food Benefits"]
+          }
+        ]
       },
       {
         "need_type": "medication management",
@@ -63,7 +83,21 @@
           }
         ],
         "status": "ongoing",
-        "priority": "high"
+        "priority": "high",
+        "relevant_resources": [
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Other%20Medical%20Services&refinementList[eligibilities][0]=Adults&refinementList[eligibilities][1]=Medication%20Management",
+            "category": "Health Resources",
+            "tags": ["Medication Management", "Pharmacy Services"]
+          },
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Medication%20Management&refinementList[eligibilities][0]=Adults&refinementList[eligibilities][1]=Limited%20Mobility",
+            "category": "Health Resources",
+            "tags": ["Medication Organization", "Delivery Services"]
+          }
+        ]
       },
       {
         "need_type": "financial assistance",
@@ -95,7 +129,27 @@
           }
         ],
         "status": "ongoing",
-        "priority": "medium"
+        "priority": "medium",
+        "relevant_resources": [
+          {
+            "name": "Finance Resources: Financial assistance for living expenses",
+            "url": "https://www.sfserviceguide.org/financial-resources/results?refinementList[categories][0]=Financial%20assistance%20for%20living%20expenses&refinementList[eligibilities][0]=I%20am%20a%20Senior&refinementList[eligibilities][1]=Low-Income",
+            "category": "Finance Resources",
+            "tags": ["Medical Bills", "Financial Assistance", "Medicare"]
+          },
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Other%20Medical%20Services&refinementList[eligibilities][0]=Adults&refinementList[eligibilities][1]=Underinsured",
+            "category": "Health Resources",
+            "tags": ["Medicare Part D", "Prescription Coverage", "Senior"]
+          },
+          {
+            "name": "Finance Resources: Emergency Financial Assistance",
+            "url": "https://www.sfserviceguide.org/financial-resources/results?refinementList[categories][0]=Emergency%20Financial%20Assistance&refinementList[eligibilities][0]=I%20am%20a%20Senior",
+            "category": "Finance Resources",
+            "tags": ["Medical Bills", "Emergency Assistance"]
+          }
+        ]
       },
       {
         "need_type": "care coordination",
@@ -127,7 +181,21 @@
           }
         ],
         "status": "ongoing",
-        "priority": "medium"
+        "priority": "medium",
+        "relevant_resources": [
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Other%20Medical%20Services&refinementList[eligibilities][0]=Adults",
+            "category": "Health Resources",
+            "tags": ["Care Coordination", "Medical Appointments", "Senior"]
+          },
+          {
+            "name": "Health Resources: Other Medical Services",
+            "url": "https://www.sfserviceguide.org/medical-services-resources/results?refinementList[categories][0]=Other%20Medical%20Services&refinementList[eligibilities][0]=Adults&refinementList[eligibilities][1]=Limited%20Mobility",
+            "category": "Health Resources",
+            "tags": ["Medical Transportation", "Senior Services"]
+          }
+        ]
       }
     ],
     "summary_date": "2023-10-15",

@@ -1,0 +1,26 @@
+{"description": "Recommendations addressing social risk factors that may impact patient care and outcomes.",
+  "recommendations": [
+    {
+      "description": "Prescribe once-daily generic medications to reduce cost burden and simplify medication regimen.",
+      "citation": {
+        "note_id": 1,
+        "quote": "The patient expressed significant concern about mounting medical bills, stating she is using credit cards to pay for medications and has delayed filling some prescriptions due to cost"
+      }
+    },
+    {
+      "description": "Discharge patient with thirty days worth of medications in hand to ensure immediate post-discharge adherence.",
+      "citation": {
+        "note_id": 2,
+        "quote": "The patient reports skipping meals due to inability to shop for or prepare food. She relies heavily on pre-packaged meals and has lost 10 pounds in the last 3 months."
+      }
+    },
+    {
+      "description": "Provide medication vouchers and financial assistance information to reduce medication cost burden.",
+      "citation": {
+        "note_id": 2,
+        "quote": "SW provided patient with hospital financial assistance application and reviewed eligibility requirements."
+      }
+    }
+  ]
+}
+

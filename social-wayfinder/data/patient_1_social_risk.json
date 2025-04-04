@@ -1,0 +1,19 @@
+{
+  "description": "Recommendations addressing social risk factors that may impact patient care and outcomes.",
+  "recommendations": [
+    {
+      "description": "Provide medications in sealed blister packs via a home medication delivery service due to transportation needs, mobility restrictions, and APS concerns.",
+      "citation": {
+        "note_id": 2,
+        "quote": "A wheelchair van has been scheduled for pick-up today at 4:00 PM to transport the patient home."
+      }
+    },
+    {
+      "description": "Instruct patient and IHSS worker to bring blister packs to primary care appointments to ensure medications are being delivered and taken as prescribed.",
+      "citation": {
+        "note_id": 2,
+        "quote": "SW contacted the patient’s IHSS social worker to inform them of the patient’s return home and requested the resumption of IHSS services"
+      }
+    }
+  ]
+}
