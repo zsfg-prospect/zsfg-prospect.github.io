@@ -1,6 +1,27 @@
 {
   "summary": {
     "identified_needs": [
+        { 
+        "social_need_type": "substance_use",
+        "description": "Patient reports use of fentanyl and is open to receiving medication treatment to support recovery.",
+        "citation": {
+          "note_id": 1,
+          "quote": "The patient reports use of fentanyl and is open to receiving medication treatment to support recovery from substance use."
+        },
+        "previous_actions": [],
+        "current_actions": [],
+        "planned_actions": [
+          {
+            "description": "Coordinate medication treatment for substance use recovery (e.g., referral to MAT program).",
+            "citation": {
+              "note_id": 1,
+              "quote": "The patient reports use of fentanyl and is open to receiving medication treatment to support recovery from substance use."
+            }
+          }
+        ],
+        "status": "ongoing",
+        "priority": "high"
+      },
       {
         "need_type": "housing",
         "description": "The patient lives alone and requires In-Home Supportive Services (IHSS).",

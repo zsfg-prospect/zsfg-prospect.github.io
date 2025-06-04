@@ -2,6 +2,13 @@
   "description": "Recommendations addressing social risk factors that may impact patient care and outcomes.",
   "recommendations": [
     {
+      "description": "Consider buprenorphine over methadone to reduce need for daily transportation to clinic for administration",
+      "citation": {
+        "note_id": 2,
+        "quote": "A wheelchair van has been scheduled for pick-up today at 4:00 PM to transport the patient home."
+      }
+    },
+    {
       "description": "Provide medications in sealed blister packs via a home medication delivery service due to transportation needs, mobility restrictions, and APS concerns.",
       "citation": {
         "note_id": 2,
