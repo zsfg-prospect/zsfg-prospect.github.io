@@ -32,7 +32,7 @@
         "previous_actions": [],
         "current_actions": [
           {
-            "description": "Contacted IHSS social worker to inform them of patient\u2019s return home and requested resumption of IHSS services.",
+            "description": "Contacted IHSS social worker to inform them of patient\u2019s return home and requested resumption of IHSS services. <a href='/social-wayfinder/ihss_1.pdf' target='_blank' style='color: #2563eb; text-decoration: underline;'>View IHSS Form</a>",
             "status": "in_progress",
             "date": "2023-09-27",
             "citation": {
