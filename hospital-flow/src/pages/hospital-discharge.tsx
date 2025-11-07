@@ -44,7 +44,7 @@ export default function HospitalDischarge() {
   useEffect(() => {
     const fetchHospitalData = async () => {
       try {
-        const response = await fetch('/hospital_flow.json');
+        const response = await fetch('/hospital-flow/hospital_flow.json');
         if (!response.ok) {
           throw new Error('Failed to load hospital flow data');
         }

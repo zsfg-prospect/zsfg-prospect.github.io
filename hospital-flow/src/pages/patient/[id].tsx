@@ -59,7 +59,7 @@ export default function PatientSummary() {
       try {
         console.log('Loading data from static JSON...');
         // Load data from static JSON file
-        const response = await fetch('/patient_discharge.json');
+        const response = await fetch('/hospital-flow/patient_discharge.json');
         
         if (!response.ok) {
           throw new Error('Failed to load static data');
