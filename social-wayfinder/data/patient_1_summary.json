@@ -32,7 +32,7 @@
         "previous_actions": [],
         "current_actions": [
           {
-            "description": "Contacted IHSS social worker to inform them of patient\u2019s return home and requested resumption of IHSS services.",
+            "description": "Contacted IHSS social worker to inform them of patient's return home and requested resumption of IHSS services. [View IHSS Form: /social-wayfinder/ihss_1.pdf]",
             "status": "in_progress",
             "date": "2023-09-27",
             "citation": {
@@ -56,6 +56,15 @@
             "url": "https://www.sfserviceguide.org/financial-resources/results?refinementList[categories][0]=Financial%20assistance%20for%20living%20expenses&refinementList[eligibilities][0]=I%20am%20a%20Senior&refinementList[eligibilities][1]=Low-Income",
             "category": "Finance Resources",
             "tags": ["Senior", "Low-Income", "Medicare"]
+          }
+        ],
+        "prefilled_forms": [
+          {
+            "name": "IHSS Service Resumption Request",
+            "description": "Pre-filled form for contacting IHSS social worker about patient's return home and service resumption",
+            "file_url": "/social-wayfinder/ihss_1.pdf",
+            "related_action": "Contacted IHSS social worker to inform them of patient's return home and requested resumption of IHSS services.",
+            "form_type": "IHSS"
           }
         ]
       },
