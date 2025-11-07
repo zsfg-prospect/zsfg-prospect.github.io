@@ -1,4 +1,31 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><link rel="preload" href="/social-wayfinder/_next/static/css/ea8eaf6c4be2c06d.css" as="style"/><link rel="stylesheet" href="/social-wayfinder/_next/static/css/ea8eaf6c4be2c06d.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" noModule="" src="/social-wayfinder/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/social-wayfinder/_next/static/chunks/webpack-b0971d369be9db6b.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/framework-84d6ee64cdf12741.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/main-2d5fa6fe0371c531.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/pages/_app-a3f35041f74c110a.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/pages/index-305d606899d2f918.js" defer=""></script><script src="/social-wayfinder/_next/static/-VGDT4UxfKJL3yyGNqhK6/_buildManifest.js" defer=""></script><script src="/social-wayfinder/_next/static/-VGDT4UxfKJL3yyGNqhK6/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen bg-gray-100"><div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8"><h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">Social Services Notes Viewer</h1><div class="max-w-3xl mx-auto mt-10 bg-white rounded-lg shadow-lg p-6"><h2 class="text-2xl font-bold text-gray-800 mb-6">Patient Summary Generator</h2><form class="space-y-6"><div class="mb-6"><label for="patient-select" class="block text-sm font-medium text-gray-900 mb-2">Select Patient ID</label><div class="relative"><button type="button" class="
+<!DOCTYPE html><html><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><link rel="preload" href="/social-wayfinder/_next/static/css/ea8eaf6c4be2c06d.css" as="style"/><link rel="stylesheet" href="/social-wayfinder/_next/static/css/ea8eaf6c4be2c06d.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" noModule="" src="/social-wayfinder/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/social-wayfinder/_next/static/chunks/webpack-b0971d369be9db6b.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/framework-84d6ee64cdf12741.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/main-2d5fa6fe0371c531.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/pages/_app-a3f35041f74c110a.js" defer=""></script><script src="/social-wayfinder/_next/static/chunks/pages/index-305d606899d2f918.js" defer=""></script><script src="/social-wayfinder/_next/static/-VGDT4UxfKJL3yyGNqhK6/_buildManifest.js" defer=""></script><script src="/social-wayfinder/_next/static/-VGDT4UxfKJL3yyGNqhK6/_ssgManifest.js" defer=""></script></head><body>
+<script>
+// Convert text patterns like [View IHSS Form: /path] to clickable links
+function convertLinksInText() {
+  const pattern = /\[View IHSS Form: ([^\]]+)\]/g;
+  document.querySelectorAll('*').forEach(element => {
+    if (element.children.length === 0 && element.textContent) {
+      const newHTML = element.textContent.replace(pattern, '<a href="$1" target="_blank" style="color: #2563eb; text-decoration: underline;">View IHSS Form</a>');
+      if (newHTML !== element.textContent) {
+        element.innerHTML = newHTML;
+      }
+    }
+  });
+}
+
+// Run the conversion after page loads and content is rendered
+window.addEventListener('load', () => {
+  // Initial conversion
+  setTimeout(convertLinksInText, 1000);
+  // Check periodically for dynamic content
+  setInterval(convertLinksInText, 2000);
+});
+</script><div id="__next"><div class="min-h-screen bg-gray-100"><div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8"><div class="text-center mb-4">
+<a href="../social_wayfinder_demo/out/index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+View Interactive Demo
+</a>
+</div>
+<h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">Social Services Notes Viewer</h1><div class="max-w-3xl mx-auto mt-10 bg-white rounded-lg shadow-lg p-6"><h2 class="text-2xl font-bold text-gray-800 mb-6">Patient Summary Generator</h2><form class="space-y-6"><div class="mb-6"><label for="patient-select" class="block text-sm font-medium text-gray-900 mb-2">Select Patient ID</label><div class="relative"><button type="button" class="
                         relative w-full text-left
                         rounded-lg border-2 bg-white px-4 py-2.5 text-gray-900
                         transition-colors duration-200
