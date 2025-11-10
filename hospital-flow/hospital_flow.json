@@ -152,7 +152,7 @@
           "requires_24_7_care": 2,
           "no_family_support": 1
         },
-        "llm_reasoning": "Medically cleared for discharge but awaiting IHSS approval and home support coordination. Discharge delayed 3 days waiting for placement services."
+        "llm_reasoning": "Medically cleared for discharge but awaiting IHSS approval and obtain home support coordination. Required tasks: obtain IHSS approval, coordinate home services, schedule case management follow-up. Discharge delayed 3 days waiting for placement services."
       },
       {
         "patient_id": 2,
