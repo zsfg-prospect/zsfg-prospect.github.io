@@ -10,6 +10,7 @@ import SummaryDisplay from '../../components/SummaryDisplay';
 import TabNavigation from '../../components/TabNavigation';
 import { Note, NoteSummary } from '../../types/api';
 import { transformStaticDataToNoteSummary } from '../../utils/dataTransformer';
+import { getApiPath } from '../../utils/paths';
 
 export default function PatientSummary() {
   const router = useRouter();
@@ -59,7 +60,7 @@ export default function PatientSummary() {
       try {
         console.log('Loading data from static JSON...');
         // Load data from static JSON file
-        const response = await fetch('/hospital-flow/patient_discharge.json');
+        const response = await fetch(getApiPath('/patient_discharge.json'));
         
         if (!response.ok) {
           throw new Error('Failed to load static data');

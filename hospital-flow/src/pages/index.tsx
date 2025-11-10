@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Patient Discharge Needs | Social Services Note Viewer</title>
+                <title>Patient Flow Needs | Social Services Note Viewer</title>
                 <meta name="description" content="View and analyze social services notes and summaries" />
             </Head>
             <div className="flex flex-col h-screen">
@@ -19,7 +19,7 @@ export default function Home() {
                     <div className="flex-1 overflow-auto">
                         <div className="max-w-7xl mx-auto p-4">
                             <div className="bg-white rounded-lg shadow-sm p-8 text-center">
-                                <h1 className="text-3xl font-bold text-gray-900 mb-4">Patient Discharge Needs</h1>
+                                <h1 className="text-3xl font-bold text-gray-900 mb-4">Patient Flow Needs</h1>
                                 <p className="text-gray-600 mb-6">Select a patient from the sidebar to view their discharge needs analysis.</p>
                             </div>
                         </div>

@@ -11,7 +11,6 @@ import { TherapyCard } from './TherapyCard';
 import { PatientContactsCard } from './PatientContactsCard';
 import { SupportAtHomeCard } from './SupportAtHomeCard';
 import { SubstanceUseCard } from './SubstanceUseCard';
-import { SevereMedicalConditionsSection } from './SevereMedicalConditionsSection';
 import { EDVisitsCard } from './EDVisitsCard';
 import { PsychHospitalCard } from './PsychHospitalCard';
 import { DMECard } from './DMECard';
@@ -214,7 +213,6 @@ const QuickNav = ({
     hasContacts,
     hasSupportAtHome,
     hasSubstanceUse,
-    hasSevereMedCond,
     hasEdVisits,
     hasPsychHospital,
     hasDME,
@@ -233,7 +231,6 @@ const QuickNav = ({
     hasContacts: boolean;
     hasSupportAtHome: boolean;
     hasSubstanceUse: boolean;
-    hasSevereMedCond: boolean;
     hasEdVisits: boolean;
     hasPsychHospital: boolean;
     hasDME: boolean;
@@ -310,7 +307,7 @@ const QuickNav = ({
 
                 {/* High Priority Section */}
                 <div className="border-b pb-3">
-                    <h4 className="text-sm font-semibold text-gray-800 mb-2 px-2">High Priority</h4>
+                    <h4 className="text-sm font-semibold text-gray-800 mb-2 px-2">High Priority Discharge Tasks</h4>
                     <div className="space-y-1">
                         {/* Diagnostics */}
                         {hasDME && (
@@ -353,9 +350,9 @@ const QuickNav = ({
                 </div>
 
 
-                {/* Social Needs Assessment Section */}
+                {/* Social Needs Evaluation for Flow Section */}
                 <div className="border-b pb-3">
-                    <h4 className="text-sm font-semibold text-gray-800 mb-2 px-2">Social Needs Assessment</h4>
+                    <h4 className="text-sm font-semibold text-gray-800 mb-2 px-2">Social Needs Evaluation for Flow</h4>
                     <div className="space-y-1">
                         {/* Identified Needs */}
                         <button
@@ -414,30 +411,6 @@ const QuickNav = ({
                     </div>
                 </div>
 
-                {/* Medical Assessment Section */}
-                <div className="border-b pb-3">
-                    <h4 className="text-sm font-semibold text-gray-800 mb-2 px-2">Medical Assessment</h4>
-                    <div className="space-y-1">
-                        {/* Severe Medical Conditions */}
-                        {hasSevereMedCond && (
-                            <button
-                                onClick={() => onNeedClick('severe-med-cond')}
-                                className={`w-full flex items-center justify-start text-left px-2 py-1 rounded-md transition-colors duration-200
-                                    ${activeNeedId === 'severe-med-cond'
-                                        ? 'bg-red-50 text-red-700 font-medium'
-                                        : 'text-gray-900 hover:bg-gray-50'
-                                    }`}
-                            >
-                                <span className="w-4 h-4 mr-2 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center">
-                                    <svg className="w-2.5 h-2.5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </span>
-                                <span className="truncate text-sm">Medical Conditions</span>
-                            </button>
-                        )}
-                    </div>
-                </div>
 
                 {/* Resources Section */}
                 <div className="border-b pb-3">
@@ -620,8 +593,6 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
             selector = '[data-section-id="patient-contacts"]';
         } else if (needId === 'substance-use') {
             selector = '[data-section-id="substance-use"]';
-        } else if (needId === 'severe-med-cond') {
-            selector = '[data-section-id="severe-med-cond"]';
         } else if (needId === 'ed-visits') {
             selector = '[data-section-id="ed-visits"]';
         } else if (needId === 'psych-hospital') {
@@ -657,7 +628,6 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
                     hasContacts={summary.patient_contacts.length > 0}
                     hasSupportAtHome={!!summary.support_at_home}
                     hasSubstanceUse={!!summary.substance_use}
-                    hasSevereMedCond={summary.severe_med_cond && summary.severe_med_cond.length > 0}
                     hasEdVisits={!!summary.ed_visits}
                     hasPsychHospital={!!summary.psych_hospital}
                     hasDME={!!summary.dme && summary.dme.length > 0}
@@ -668,7 +638,7 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
                 <div id="generated-summary" ref={summaryRef}>
                     {/* Patient Timeline - Show for all patients since they use same data */}
                     <div className="mb-12">
-                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">Patient Timeline</h1>
+                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">Patient Hospitalization Timeline</h1>
                         <div className="bg-white rounded-lg shadow-sm p-6">
                             <Image
                                 src="/images/patient_1_timeline.png"
@@ -715,7 +685,7 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
 
                     {/* High Priority Section */}
                     <div className="mb-12">
-                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">High Priority</h1>
+                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">High Priority Discharge Tasks</h1>
                         
                         {/* Diagnostics Section */}
                         {summary.dme && summary.dme.length > 0 && (
@@ -750,9 +720,9 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
                         )}
                     </div>
 
-                    {/* Social Needs Assessment Section */}
+                    {/* Social Needs Evaluation for Flow Section */}
                     <div className="mb-12">
-                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">Social Needs Assessment</h1>
+                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">Social Needs Evaluation for Flow</h1>
 
                         {/* Identified Needs Section */}
                         <div className="mb-8" id="identified-needs-section">
@@ -812,18 +782,6 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
                         )}
                     </div>
 
-                    {/* Medical Assessment Section */}
-                    <div className="mb-12">
-                        <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">Medical Assessment</h1>
-
-                        {/* Severe Medical Conditions Section */}
-                        {summary.severe_med_cond && summary.severe_med_cond.length > 0 && (
-                            <SevereMedicalConditionsSection 
-                                conditions={summary.severe_med_cond}
-                                onNoteClick={onNoteClick}
-                            />
-                        )}
-                    </div>
 
                     {/* Resources Section */}
                     <div className="mb-12">

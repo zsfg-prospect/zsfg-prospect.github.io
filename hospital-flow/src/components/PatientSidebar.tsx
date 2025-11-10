@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import { getApiPath } from '../utils/paths';
 
 interface PatientSidebarProps {
   currentPatientId?: string;
@@ -21,7 +22,7 @@ export default function PatientSidebar({ currentPatientId }: PatientSidebarProps
       setIsLoading(true);
       try {
         // Load data from static JSON file
-        const response = await fetch('/hospital-flow/patient_discharge.json');
+        const response = await fetch(getApiPath('/patient_discharge.json'));
         if (!response.ok) {
           throw new Error('Failed to load static data');
         }

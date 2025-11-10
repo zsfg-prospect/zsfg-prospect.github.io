@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import TabNavigation from '../components/TabNavigation';
+import { getApiPath } from '../utils/paths';
 
 interface HospitalFlowData {
   imaging_prioritization: {
@@ -44,7 +45,7 @@ export default function HospitalDischarge() {
   useEffect(() => {
     const fetchHospitalData = async () => {
       try {
-        const response = await fetch('/hospital-flow/hospital_flow.json');
+        const response = await fetch(getApiPath('/hospital_flow.json'));
         if (!response.ok) {
           throw new Error('Failed to load hospital flow data');
         }
@@ -67,11 +68,51 @@ export default function HospitalDischarge() {
     return { bg: 'bg-yellow-100', text: 'text-yellow-800', label: 'Low Priority' };
   };
 
+  const extractTasks = (reasoning: string) => {
+    // Common medical task patterns to highlight
+    const taskPatterns = [
+      /obtain\s+([A-Z]+(?:\s+[a-z]+)*(?:\s+approval)?)/gi, // "obtain TTE", "obtain IHSS approval"
+      /get\s+([A-Z]+(?:\s*\/\s*[A-Z]+)*)/gi, // "get MRI"
+      /order\s+([A-Z]+(?:\s*\/\s*[A-Z]+)*)/gi, // "order CT"
+      /schedule\s+([A-Z\s\/]+(?:consult|evaluation|assessment|follow-up))/gi, // "schedule PT consult"
+      /coordinate\s+([a-z\s]+(?:services|support|placement))/gi, // "coordinate home services"
+      /([A-Z]+(?:\s*\/\s*[A-Z]+)*)\s+(?:consult|consultation)/gi, // "PT/OT consult"
+      /(echocardiogram|echo|TTE|TEE)/gi,
+      /(MRI|CT|ultrasound|X-ray)/gi,
+      /physical therapy|occupational therapy|PT\/OT|speech therapy|SLP/gi,
+      /(IHSS\s+approval)/gi,
+      /(case\s+management\s+follow-up)/gi,
+      /(home\s+services)/gi
+    ];
+
+    const tasks: string[] = [];
+    taskPatterns.forEach(pattern => {
+      const matches = reasoning.match(pattern);
+      if (matches) {
+        matches.forEach(match => {
+          // Clean up and format the task
+          let cleanTask = match
+            .replace(/^(obtain|get|order|schedule|coordinate)\s+/i, '')
+            .trim();
+          
+          // Convert to title case for better readability
+          cleanTask = cleanTask.replace(/\b\w/g, l => l.toUpperCase());
+          
+          if (cleanTask && !tasks.includes(cleanTask)) {
+            tasks.push(cleanTask);
+          }
+        });
+      }
+    });
+
+    return tasks;
+  };
+
   if (loading) {
     return (
       <>
         <Head>
-          <title>Hospital Flow | Social Services Note Viewer</title>
+          <title>Hospital Flow Tasks | Social Services Note Viewer</title>
           <meta name="description" content="Hospital flow analysis" />
         </Head>
         <div className="flex flex-col h-screen">
@@ -95,7 +136,7 @@ export default function HospitalDischarge() {
     return (
       <>
         <Head>
-          <title>Hospital Flow | Social Services Note Viewer</title>
+          <title>Hospital Flow Tasks | Social Services Note Viewer</title>
           <meta name="description" content="Hospital flow analysis" />
         </Head>
         <div className="flex flex-col h-screen">
@@ -197,7 +238,7 @@ export default function HospitalDischarge() {
             {/* Main Content */}
             <div className="flex-1 min-w-0">
               <div className="mb-8">
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">Hospital Flow</h1>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">Hospital Flow Tasks</h1>
               </div>
 
               <div className="space-y-8">
@@ -247,7 +288,26 @@ export default function HospitalDischarge() {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="mt-2">
+                                {/* Extract and highlight key tasks */}
+                                {(() => {
+                                  const tasks = extractTasks(patient.llm_reasoning);
+                                  return tasks.length > 0 && (
+                                    <div className="mt-3">
+                                      <span className="text-sm font-medium text-gray-700">Required Tasks:</span>
+                                      <div className="flex flex-wrap gap-2 mt-2">
+                                        {tasks.map((task, index) => (
+                                          <span 
+                                            key={index}
+                                            className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200"
+                                          >
+                                            {task}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  );
+                                })()}
+                                <div className="mt-3">
                                   <span className="text-sm font-medium text-gray-700">LLM Reasoning:</span>
                                   <p className="text-sm text-gray-600 mt-1">
                                     {patient.llm_reasoning}
@@ -309,7 +369,26 @@ export default function HospitalDischarge() {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="mt-2">
+                                {/* Extract and highlight key tasks */}
+                                {(() => {
+                                  const tasks = extractTasks(patient.llm_reasoning);
+                                  return tasks.length > 0 && (
+                                    <div className="mt-3">
+                                      <span className="text-sm font-medium text-gray-700">Required Tasks:</span>
+                                      <div className="flex flex-wrap gap-2 mt-2">
+                                        {tasks.map((task, index) => (
+                                          <span 
+                                            key={index}
+                                            className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200"
+                                          >
+                                            {task}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  );
+                                })()}
+                                <div className="mt-3">
                                   <span className="text-sm font-medium text-gray-700">LLM Reasoning:</span>
                                   <p className="text-sm text-gray-600 mt-1">
                                     {patient.llm_reasoning}
@@ -371,7 +450,26 @@ export default function HospitalDischarge() {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="mt-2">
+                                {/* Extract and highlight key tasks */}
+                                {(() => {
+                                  const tasks = extractTasks(patient.llm_reasoning);
+                                  return tasks.length > 0 && (
+                                    <div className="mt-3">
+                                      <span className="text-sm font-medium text-gray-700">Required Tasks:</span>
+                                      <div className="flex flex-wrap gap-2 mt-2">
+                                        {tasks.map((task, index) => (
+                                          <span 
+                                            key={index}
+                                            className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200"
+                                          >
+                                            {task}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  );
+                                })()}
+                                <div className="mt-3">
                                   <span className="text-sm font-medium text-gray-700">LLM Reasoning:</span>
                                   <p className="text-sm text-gray-600 mt-1">
                                     {patient.llm_reasoning}
