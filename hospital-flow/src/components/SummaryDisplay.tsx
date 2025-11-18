@@ -643,9 +643,9 @@ export default function SummaryDisplay({ summary, onNoteClick, summaryRef, patie
                             <Image
                                 src="/images/patient_1_timeline.png"
                                 alt={`Patient ${patientId} Timeline`}
-                                width={600}
-                                height={300}
-                                className="w-1/2 h-auto rounded-lg border border-gray-200 mx-auto"
+                                width={1200}
+                                height={600}
+                                className="w-full h-auto rounded-lg border border-gray-200 mx-auto"
                             />
                         </div>
                     </div>
