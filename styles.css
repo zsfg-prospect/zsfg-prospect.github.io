@@ -251,36 +251,6 @@ img { max-width: 100%; height: auto; }
 .project header .refs { font-size: 16px; padding-top: 6px; }
 .project .body { grid-column: span 8; display: flex; flex-direction: column; gap: 16px; font-size: 18px; }
 
-.callout {
-  background: var(--band);
-  border: 1px solid var(--rule);
-  padding: 40px 44px;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 40px;
-  align-items: center;
-}
-.callout .text { grid-column: span 8; display: flex; flex-direction: column; gap: 10px; }
-.callout .action { grid-column: span 4; text-align: right; font-size: 17px; }
-
-/* Learning Safety Net */
-.steps { display: flex; flex-direction: column; }
-.step {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  gap: 24px;
-  padding: 32px 0;
-  border-top: 1px solid var(--rule);
-}
-.step:last-child { border-bottom: 1px solid var(--rule); }
-.step .num {
-  font-family: var(--serif);
-  font-size: 34px;
-  line-height: 1;
-  color: var(--gold);
-}
-.step h3 { margin-bottom: 8px; }
-
 /* Team */
 .team-grid {
   display: grid;
@@ -373,12 +343,10 @@ img { max-width: 100%; height: auto; }
   .hero .lede p { font-size: 17px; }
   .section { padding-top: 36px; padding-bottom: 40px; }
   .page-title { padding-top: 40px; padding-bottom: 28px; }
-  .grid, .partner-row, .project, .callout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .grid, .partner-row, .project { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .col-3, .col-4, .col-5, .col-7, .col-8,
   .partner-row .label, .partner-row .logos, .partner-row .names,
-  .project header, .project .body, .callout .text, .callout .action { grid-column: span 1; }
-  .callout { padding: 28px 24px; }
-  .callout .action { text-align: left; }
+  .project header, .project .body { grid-column: span 1; }
   .programs { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .partner-row .logos { gap: 20px 28px; }
   .logo-zsfg, .logo-sfdph { height: 40px; }
@@ -386,7 +354,6 @@ img { max-width: 100%; height: auto; }
   .logo-kpo { height: 36px; }
   .logo-sheltertech { height: 28px; }
   .news-item { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 18px 0; }
-  .step { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 24px 0; }
   .site-footer { margin-top: 48px; }
   .site-footer .right { text-align: left; }
 }
