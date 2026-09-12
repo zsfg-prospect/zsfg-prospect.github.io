@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROSPECT Lab</title>
+    <title>Team | PROSPECT Lab</title>
+    <meta name="description" content="The PROSPECT Lab team at Zuckerberg San Francisco General Hospital.">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/favicon-180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;600&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-border top"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="team.html" class="active">Team</a></li>
-                <li><a href="publications.html">Publications and Talks</a></li>
-            </ul>
-        </nav>
-        <h1>Team Members</h1>
+    <header class="site-header">
+        <div class="wrap">
+            <a href="index.html" class="logo-link"><img src="images/prospect_logo.png" alt="PROSPECT Lab"></a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="team.html" class="active">Team</a>
+                <a href="publications.html">Publications and Talks</a>
+                <a href="news.html">News</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="team-container">
+        <section class="wrap page-title grid">
+            <div class="col-7 stack">
+                <p class="eyebrow">Team</p>
+                <h1>Team members</h1>
+            </div>
+        </section>
+        <div class="wrap">
+<section class="team-grid">
             <div class="team-member">
                 <img src="images/luke_pic.jpeg">
                 <h3>Lucas Zier</h3>
@@ -116,7 +130,7 @@
 
         <h2 class="section-heading">Alumni</h2>
 
-        <section class="team-container">
+        <section class="team-grid">
             <div class="team-member">
                 <img src="images/avni_pic.jpg">
                 <h3>Avni Kothari</h3>
@@ -148,11 +162,19 @@
                 <p>Data Analyst</p>
             </div>
         </section>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2024 PROSPECT Lab. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <img src="images/prospect_logo.png" alt="PROSPECT Lab">
+                <p class="muted">Zuckerberg San Francisco General Hospital and Trauma Center<br>1001 Potrero Avenue, San Francisco, CA 94110</p>
+            </div>
+            <div class="right">
+                <p>Contact us at prospect at-sign sfdph dot org.</p>
+                <p class="muted">&copy; 2026 PROSPECT Lab. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-    <div class="header-border"></div>
 </body>
 </html>
