@@ -5,9 +5,13 @@
   --navy: #102838;
   --ink: #2a3742;
   --muted: #5b6a76;
-  --teal: #157a91;
-  --teal-dark: #0f5f72;
-  --gold: #d99a1e;
+  --teal: #005695;
+  --teal-dark: #102838;
+  --gold: #f3901d;
+  --zsfg-red: #e31837;
+  --zsfg-purple: #63619a;
+  --zsfg-teal: #38939b;
+  --stripe: linear-gradient(to right, #e31837 0 14.29%, #75c7b9 14.29% 28.57%, #6d706c 28.57% 42.86%, #63619a 42.86% 57.14%, #f3901d 57.14% 71.43%, #38939b 71.43% 85.71%, #005695 85.71% 100%);
   --rule: #dfe4e8;
   --band: #f4f6f8;
   --serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
@@ -77,6 +81,14 @@ img { max-width: 100%; height: auto; }
   border-bottom: 1px solid var(--rule);
   background: #ffffff;
 }
+/* ZSFG color stripe, top of every page and under the footer */
+.site-header::before,
+.site-footer::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background: var(--stripe);
+}
 .site-header .wrap {
   display: flex;
   align-items: center;
@@ -134,37 +146,65 @@ img { max-width: 100%; height: auto; }
 .col-12 { grid-column: span 12; }
 
 /* Home hero */
-.hero { padding-top: 88px; padding-bottom: 72px; }
-.hero .lede { padding-top: 46px; }
-.hero .lede p { font-size: 19px; line-height: 1.6; }
-.acronym { font-size: 17px; line-height: 1.5; color: var(--muted); max-width: 600px; }
-.acronym b { color: var(--navy); font-weight: 600; }
+.hero { padding-top: 56px; padding-bottom: 72px; align-items: start; }
+.hero h1 { font-size: 34px; line-height: 1.12; }
+.hero .lede { font-size: 17px; line-height: 1.6; }
+.acronym { font-size: 15px; line-height: 1.5; color: var(--muted); }
+.acronym b {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
 
 /* Page title block (interior pages) */
 .page-title { padding-top: 80px; padding-bottom: 56px; align-items: end; }
 .page-title h1 { font-size: 46px; line-height: 1.12; }
 .page-title .intro { font-size: 19px; line-height: 1.6; }
 
-/* Program list (home) */
-.programs {
+/* Program outcomes (home) */
+.outcomes { display: flex; flex-direction: column; gap: 36px; }
+.outcomes h2 { font-size: 32px; max-width: 860px; }
+.outcome {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px 40px;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 48px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
 }
-.program {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border-top: 2px solid var(--navy);
-  padding-top: 16px;
+.outcome:last-child { border-bottom: 1px solid var(--rule); }
+.outcome .stat { display: flex; flex-direction: column; gap: 4px; }
+.outcome .stat::before {
+  content: "";
+  width: 48px;
+  height: 4px;
+  margin-bottom: 10px;
+  background: var(--navy);
 }
-.program p { font-size: 17px; }
+.outcome.red .stat::before { background: var(--zsfg-red); }
+.outcome.orange .stat::before { background: var(--gold); }
+.outcome.purple .stat::before { background: var(--zsfg-purple); }
+.outcome.teal .stat::before { background: var(--zsfg-teal); }
+.outcome .figure { font-family: var(--serif); font-size: 44px; line-height: 1.1; color: var(--navy); }
+.outcome .stat .label { font-size: 15px; color: var(--muted); }
+.outcome .body { display: flex; flex-direction: column; gap: 8px; max-width: 760px; }
+.outcome h3 { font-size: 24px; }
+.outcome .body p { font-size: 17px; }
+
+/* Team strip (home) */
+.team-strip { align-items: center; padding-top: 64px; padding-bottom: 56px; }
+.team-strip .faces { display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; }
+.team-strip .faces img { width: 68px; height: 68px; border-radius: 50%; object-fit: cover; display: block; }
 
 /* Video */
 .video-frame {
   position: relative;
   aspect-ratio: 16 / 9;
   background: var(--navy);
+  border-top: 4px solid var(--gold);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -208,6 +248,7 @@ img { max-width: 100%; height: auto; }
   flex-wrap: wrap;
   font-size: 17px;
 }
+.partner-row .names p { margin: 0; }
 .partner-row .names a { color: var(--navy); }
 .logo-zsfg { height: 52px; }
 .logo-ucsf { height: 64px; }
@@ -226,14 +267,30 @@ img { max-width: 100%; height: auto; }
 }
 .news-item:first-child { padding-top: 0; }
 .news-item .date {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  padding-top: 4px;
+  color: var(--teal);
+  padding-top: 2px;
 }
 .news-item p { font-size: 17px; }
+
+/* Recent news (home) */
+.news-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 2px solid var(--navy);
+  padding-top: 16px;
+}
+.news-card .date { font-size: 15px; font-weight: 600; color: var(--teal); }
+.news-card p { font-size: 16px; }
+.news-card p + p { margin-top: 0; }
 
 /* Projects */
 .project {
@@ -314,7 +371,9 @@ img { max-width: 100%; height: auto; }
 .pub-caption + .pub-caption { margin-top: 2px; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--rule); margin-top: 96px; }
+.site-footer { background: var(--navy); color: #ffffff; margin-top: 96px; }
+.site-footer .muted { color: rgba(255, 255, 255, 0.8); }
+.site-footer .name { font-family: var(--serif); font-size: 20px; }
 .site-footer .wrap {
   display: flex;
   justify-content: space-between;
@@ -324,8 +383,8 @@ img { max-width: 100%; height: auto; }
   padding-bottom: 48px;
   flex-wrap: wrap;
 }
-.site-footer img { height: 36px; width: 116px; display: block; margin-bottom: 12px; }
 .site-footer p { font-size: 15px; }
+.site-footer p + p { margin-top: 6px; }
 .site-footer .right { text-align: right; }
 
 /* Responsive */
@@ -347,7 +406,15 @@ img { max-width: 100%; height: auto; }
   .col-3, .col-4, .col-5, .col-7, .col-8,
   .partner-row .label, .partner-row .logos, .partner-row .names,
   .project header, .project .body { grid-column: span 1; }
-  .programs { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .hero h1 { font-size: 30px; }
+  .outcomes { gap: 24px; }
+  .outcomes h2 { font-size: 26px; }
+  .outcome { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px 0; }
+  .outcome .figure { font-size: 36px; }
+  .team-strip { padding-top: 36px; padding-bottom: 36px; }
+  .team-strip .faces { justify-content: flex-start; }
+  .team-strip .faces img { width: 56px; height: 56px; }
+  .news-cards { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .partner-row .logos { gap: 20px 28px; }
   .logo-zsfg, .logo-sfdph { height: 40px; }
   .logo-ucsf { height: 52px; }
